@@ -26,7 +26,6 @@ const UserRowContainer = ({
 			setInitialRoleId(newUserRoleId);
 		});
 	};
-
 	const isSaveButtonDisabled = selectedRoleId === initialRoleId;
 
 	return (

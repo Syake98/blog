@@ -4,21 +4,14 @@
       "id": "001",
       "login": "zhenya",
       "password": "qwe123",
-      "registed_at": "2050-09-22",
+      "registed_at": "2040-11-16 17:14",
       "role_id": 0
     },
     {
-      "id": "42ec",
-      "login": "ivan",
-      "password": "qwe123",
-      "registed_at": "2040-11-16 17:14",
-      "role_id": 2
-    },
-    {
-      "id": "b89a",
-      "login": "qweqwe",
-      "password": "qweqwe",
-      "registed_at": "2061-05-19 05:35",
+      "id": "3f27",
+      "login": "admin",
+      "password": "adminn",
+      "registed_at": "2052-05-12 02:43",
       "role_id": 2
     }
   ],
@@ -105,5 +98,40 @@
       "published_at": "2036-09-23"
     }
   ],
-  "comments": []
+  "comments": [
+    {
+      "id": "d5c8",
+      "author_id": "001",
+      "post_id": "001",
+      "published_at": "2056-12-21 06:38",
+      "content": "asdas"
+    },
+    {
+      "id": "90cc",
+      "author_id": "001",
+      "post_id": "001",
+      "published_at": "2038-05-10 21:07",
+      "content": "fecercre"
+    },
+    {
+      "id": "7f39",
+      "author_id": "001",
+      "post_id": "001",
+      "published_at": "2044-05-27 09:49",
+      "content": "ojno"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "a9be",
+      "hash": "0.77113882971289959833427474222844466567039489746094",
+      "user": {
+        "id": "001",
+        "login": "zhenya",
+        "password": "qwe123",
+        "registeredAt": "2040-11-16 17:14",
+        "roleId": 0
+      }
+    }
+  ]
 }
