@@ -3,3 +3,7 @@ export * from './selector-user-login';
 export * from './selector-user-session';
 export * from './selector-post';
 export * from './selector-user-id';
+export * from './selector-modal-text';
+export * from './selector-modal-on-confirm';
+export * from './selector-modal-on-cancel';
+export * from './selector-modal-is-open';
