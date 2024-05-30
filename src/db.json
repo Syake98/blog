@@ -98,6 +98,20 @@
       "post_id": "001",
       "published_at": "2038-05-10 21:07",
       "content": "fecercre"
+    },
+    {
+      "id": "42b0",
+      "author_id": "001",
+      "post_id": "003",
+      "published_at": "2054-02-26 10:22",
+      "content": "asdasdas"
+    },
+    {
+      "id": "0ba1",
+      "author_id": "001",
+      "post_id": "003",
+      "published_at": "2052-03-30 03:21",
+      "content": "asdasascs"
     }
   ],
   "sessions": [
@@ -115,6 +129,17 @@
     {
       "id": "ba21",
       "hash": "0.80123093543609957833950829808600246906280517578125",
+      "user": {
+        "id": "001",
+        "login": "zhenya",
+        "password": "qwe123",
+        "registeredAt": "2040-11-16 17:14",
+        "roleId": 0
+      }
+    },
+    {
+      "id": "b638",
+      "hash": "0.73055809456054321415763297409284859895706176757813",
       "user": {
         "id": "001",
         "login": "zhenya",
