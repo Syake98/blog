@@ -13,11 +13,19 @@ const AppColumn = styled.div`
 	width: 1000px;
 	min-height: 100%;
 	margin: 0 auto;
+	position: relative;
 	background-color: #fff;
 `;
 
 const Page = styled.div`
-	padding: 120px 0 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	position: absolute;
+	inset-block: 120px;
+	overflow: hidden auto;
+	width: 100%;
 `;
 
 export const Blog = () => {

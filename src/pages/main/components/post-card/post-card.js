@@ -15,7 +15,7 @@ const PostCardContainer = ({
 			<Link to={`/post/${id}`}>
 				<img src={imageUrl} alt={title} />
 				<div className="post-card-footer">
-					<h4>{title}</h4>
+					<h4 className="post-card-title">{title}</h4>
 					<div className="post-card-info">
 						<div className="published-at">
 							<Icon
@@ -49,6 +49,13 @@ export const PostCard = styled(PostCardContainer)`
 	margin: 20px;
 	border: 1px solid #000;
 
+	& .post-card-title {
+		margin: 0;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+
 	& img {
 		display: block;
 		width: 100%;
@@ -56,11 +63,6 @@ export const PostCard = styled(PostCardContainer)`
 
 	& .post-card-footer {
 		padding: 5px;
-		border: 1px solid #000;
-	}
-
-	& h4 {
-		margin: 0;
 	}
 
 	& .post-card-info {
@@ -73,7 +75,7 @@ export const PostCard = styled(PostCardContainer)`
 		display: flex;
 	}
 
-	& .comment-count {
+	& .comments-count {
 		display: flex;
 	}
 `;
