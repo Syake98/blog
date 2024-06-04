@@ -5,9 +5,10 @@ import { PostContent, PostForm, Comments } from './components';
 import { Error, PrivateContent } from '../../components';
 import { useServerRequest } from '../../hooks';
 import { RESET_POST_DATA, loadPostAsync } from '../../actions';
-import { selectorPost } from '../../selectors';
+import { selectorPost, selectorUserRole } from '../../selectors';
 import styled from 'styled-components';
-import { ROLE } from '../../constans';
+import { ERROR, ROLE } from '../../constans';
+import { checkAccess } from '../../utils';
 
 const PostContainer = ({ className }) => {
 	const [error, setError] = useState(null);
@@ -18,12 +19,21 @@ const PostContainer = ({ className }) => {
 	const isCreating = !!useMatch('/post');
 	const requestServer = useServerRequest();
 	const post = useSelector(selectorPost);
+	const userRole = useSelector(selectorUserRole);
+
+	const hasAccess = checkAccess([ROLE.ADMIN], userRole);
 
 	useLayoutEffect(() => {
 		dispatch(RESET_POST_DATA);
 	}, [dispatch, isCreating]);
 
 	useEffect(() => {
+		if (!hasAccess && (isCreating || isEditing)) {
+			setError(ERROR.ACCESS_DENIED);
+			setIsLoading(false);
+			return;
+		}
+
 		if (isCreating) {
 			setIsLoading(false);
 			return;

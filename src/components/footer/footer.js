@@ -8,13 +8,13 @@ const FooterContainer = ({ className }) => {
 
 	useEffect(() => {
 		fetch(
-			'https://api.openweathermap.org/data/2.5/weather?q=Krasnodar&units=metric&lang=ru&appid=22cff2b4988598c7b30d8f33833a7a1e',
+			'https://api.openweathermap.org/data/2.5/weather?q=Krasnodar&units=metric&lang=ru&appid=536736a2f4651e407fb2dcb6453a1ed9',
 		)
 			.then((res) => res.json())
 			.then(({ name, main, weather }) => {
 				setCity(name);
-				setTemperature(Math.round(main.temp));
-				setWeather(weather[0].description);
+				setTemperature(Math.round(main?.temp));
+				setWeather(weather[0]?.description);
 			});
 	}, []);
 

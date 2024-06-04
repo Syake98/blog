@@ -4,28 +4,28 @@
       "id": "001",
       "login": "zhenya",
       "password": "qwe123",
-      "registed_at": "2040-11-16 17:14",
+      "registered_at": "2040-11-16 17:14",
       "role_id": 0
     },
     {
       "id": "3f27",
       "login": "admin",
       "password": "adminn",
-      "registed_at": "2052-05-12 02:43",
+      "registered_at": "2052-05-12 02:43",
       "role_id": 2
     }
   ],
   "roles": [
     {
-      "id": "0",
+      "id": 0,
       "name": "Администратор"
     },
     {
-      "id": "1",
+      "id": 1,
       "name": "Модератор"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Читатель"
     },
     {

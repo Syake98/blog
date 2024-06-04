@@ -19,6 +19,7 @@ const UsersContainer = ({ className }) => {
 
 	useEffect(() => {
 		if (!checkAccess([ROLE.ADMIN], userRole)) {
+			console.log('NOT ADMIN');
 			return;
 		}
 
@@ -54,15 +55,15 @@ const UsersContainer = ({ className }) => {
 						<div className="registered-at-column">Дата регистрации</div>
 						<div className="role-column">Роль</div>
 					</TableRow>
-					{users.map(({ id, login, registredAt, roleId }) => (
+					{users.map(({ id, login, registeredAt, roleId }) => (
 						<UserRow
 							key={id}
 							id={id}
 							login={login}
-							registredAt={registredAt}
+							registeredAt={registeredAt}
 							roleId={roleId}
 							roles={roles.filter(
-								({ id: roleId }) => roleId !== ROLE.GUEST,
+								({ id: roleId }) => +roleId !== ROLE.GUEST,
 							)}
 							onUserRemove={() => onUserRemove(id)}
 						/>

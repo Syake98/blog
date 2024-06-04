@@ -1,14 +1,16 @@
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { Icon } from '../../../../components';
 import { TableRow } from '../table-row/table-row';
 import { useServerRequest } from '../../../../hooks';
+import { PROP_TYPE } from '../../../../constans';
 import styled from 'styled-components';
 
 const UserRowContainer = ({
 	className,
 	id,
 	login,
-	registredAt,
+	registeredAt,
 	roleId: userRoleId,
 	roles,
 	onUserRemove,
@@ -32,7 +34,7 @@ const UserRowContainer = ({
 		<div className={className}>
 			<TableRow border={true}>
 				<div className="login-column">{login}</div>
-				<div className="registered-at-column">{registredAt}</div>
+				<div className="registered-at-column">{registeredAt}</div>
 				<div className="role-column">
 					<select value={selectedRoleId} onChange={onRoleChange}>
 						{roles.map(({ id: roleId, name: roleName }) => (
@@ -63,3 +65,12 @@ export const UserRow = styled(UserRowContainer)`
 		font-size: 16px;
 	}
 `;
+
+UserRow.propTypes = {
+	id: PropTypes.string.isRequired,
+	login: PropTypes.string.isRequired,
+	registeredAt: PropTypes.string.isRequired,
+	roleId: PROP_TYPE.ROLE_ID.isRequired,
+	roles: PropTypes.arrayOf(PROP_TYPE.ROLE).isRequired,
+	onUserRemove: PropTypes.func.isRequired,
+};
