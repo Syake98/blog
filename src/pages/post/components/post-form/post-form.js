@@ -1,9 +1,8 @@
 import { useLayoutEffect, useRef, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Icon, Input } from '../../../../components';
 import { SpecialPanel } from '../special-panel/special-panel';
-import { useServerRequest } from '../../../../hooks';
 import { savePostAsync } from '../../../../actions';
 import { sanitizeContent } from './utils';
 import { PROP_TYPE } from '../../../../constans';
@@ -24,14 +23,12 @@ const PostFormContainer = ({
 
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
-	const requestServer = useServerRequest();
 
 	const onSave = () => {
 		const newContent = sanitizeContent(contentRef.current.innerHTML);
 
 		dispatch(
-			savePostAsync(requestServer, {
-				id,
+			savePostAsync(id, {
 				imageUrl: imageUrlValue,
 				title: titleValue,
 				content: newContent,

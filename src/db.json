@@ -12,20 +12,20 @@
       "login": "admin",
       "password": "adminn",
       "registered_at": "2052-05-12 02:43",
-      "role_id": 2
+      "role_id": 1
     }
   ],
   "roles": [
     {
-      "id": 0,
+      "id": "0",
       "name": "Администратор"
     },
     {
-      "id": 1,
+      "id": "1",
       "name": "Модератор"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Читатель"
     },
     {
@@ -142,20 +142,6 @@
       "content": "asdasascs"
     },
     {
-      "id": "3ba8",
-      "author_id": "001",
-      "post_id": "004",
-      "published_at": "2058-02-06 13:02",
-      "content": "cxzc"
-    },
-    {
-      "id": "e1c2",
-      "author_id": "001",
-      "post_id": "004",
-      "published_at": "2038-02-19 07:24",
-      "content": "zxcxzcz"
-    },
-    {
       "id": "3dea",
       "author_id": "001",
       "post_id": "004",
@@ -229,6 +215,17 @@
     {
       "id": "9330",
       "hash": "0.12497009485454646515734111744677647948265075683594",
+      "user": {
+        "id": "001",
+        "login": "zhenya",
+        "password": "qwe123",
+        "registeredAt": "2040-11-16 17:14",
+        "roleId": 0
+      }
+    },
+    {
+      "id": "4e1d",
+      "hash": "0.65220594774754436784292010997887700796127319335938",
       "user": {
         "id": "001",
         "login": "zhenya",

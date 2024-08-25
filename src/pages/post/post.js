@@ -3,7 +3,6 @@ import { useMatch, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { PostContent, PostForm, Comments } from './components';
 import { Error, PrivateContent } from '../../components';
-import { useServerRequest } from '../../hooks';
 import { RESET_POST_DATA, loadPostAsync } from '../../actions';
 import { selectorPost, selectorUserRole } from '../../selectors';
 import styled from 'styled-components';
@@ -17,7 +16,6 @@ const PostContainer = ({ className }) => {
 	const [isLoading, setIsLoading] = useState(true);
 	const isEditing = !!useMatch('/post/:id/edit');
 	const isCreating = !!useMatch('/post');
-	const requestServer = useServerRequest();
 	const post = useSelector(selectorPost);
 	const userRole = useSelector(selectorUserRole);
 
@@ -39,11 +37,11 @@ const PostContainer = ({ className }) => {
 			return;
 		}
 
-		dispatch(loadPostAsync(requestServer, params.id)).then((postData) => {
+		dispatch(loadPostAsync(params.id)).then((postData) => {
 			setError(postData.error);
 			setIsLoading(false);
 		});
-	}, [dispatch, requestServer, params.id, isCreating]);
+	}, [dispatch, params.id, isCreating]);
 
 	if (isLoading) {
 		return null;

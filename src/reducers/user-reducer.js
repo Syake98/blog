@@ -5,7 +5,7 @@ const initialUserState = {
 	id: null,
 	login: null,
 	roleId: ROLE.GUEST,
-	registedAt: null, // строки не было, возможно тут ошибка
+	registedAt: null,
 	session: null,
 };
 
